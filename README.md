@@ -7,7 +7,7 @@ Centralized repository for managing AI agent skills - modular extensions that en
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repo-url> ~/.agents
+git clone https://github.com/dapi/dotagents.git ~/.agents
 cd ~/.agents
 ```
 
