@@ -11,41 +11,37 @@ git clone <your-repo-url> ~/.agents
 cd ~/.agents
 ```
 
-### 2. Install Skills
+### 2. Install/Update Everything
 
 ```bash
-# Using make (recommended)
-make install
-
-# Or manually
-npx skills check
-npx skills update
+# Just run make - it does everything!
+make
 ```
+
+That's it! This will:
+- ✅ Install all skills from `.skill-lock.json`
+- ✅ Check for updates
+- ✅ Verify installation
+- ✅ Show you what's installed
 
 ### 3. Start Using
 
 Skills are automatically available to Claude Code once installed. Just start working and Claude will activate relevant skills based on your tasks.
 
-## 📋 Available Commands
+## 📋 Commands
 
-### Using Make
+### Super Simple
 
 ```bash
-make install    # Install/restore all skills from .skill-lock.json
-make update     # Update all installed skills
-make check      # Check for available updates
-make find       # Search for new skills interactively
-make clean      # Clean cache and temporary files
-make help       # Show all available commands
+make          # Does everything (install, update, check, verify)
+make clean    # Clean cache files
 ```
 
-### Using Skills CLI Directly
+### Manual Skills Management
 
 ```bash
 npx skills find [query]     # Search for skills
 npx skills add <package>    # Install a new skill
-npx skills check            # Check for updates
-npx skills update           # Update all skills
 npx skills list             # List installed skills
 ```
 
@@ -100,14 +96,8 @@ npx skills find deployment
 ## 🔄 Keeping Skills Up to Date
 
 ```bash
-# Check for updates (recommended weekly)
-make check
-
-# Update all skills
-make update
-
-# Or do both in one command
-make check update
+# Just run make - it updates everything
+make
 ```
 
 ## 🛠️ Troubleshooting
@@ -115,17 +105,15 @@ make check update
 ### Skills not working?
 
 ```bash
-# Reinstall all skills
-make clean
-make install
+# Just run make again
+make
 ```
 
 ### Need to reset everything?
 
 ```bash
-# Remove all skills and reinstall
 rm -rf skills/
-make install
+make
 ```
 
 ### Skills CLI not found?

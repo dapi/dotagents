@@ -65,8 +65,7 @@ The `.skill-lock.json` will be automatically updated.
 Periodically remind users to update skills:
 
 ```bash
-make check    # Check for updates
-make update   # Apply updates
+make    # Updates everything
 ```
 
 ## Best Practices
@@ -97,26 +96,20 @@ make update   # Apply updates
 When user first clones this repo:
 
 ```bash
-# 1. Navigate to repo
 cd ~/.agents
-
-# 2. Install all skills
-make install
-
-# 3. Verify installation
-npx skills list
+make
 ```
+
+That's it! Everything is installed and verified.
 
 ### Adding a Skill
 
 ```bash
-# 1. Search
+# 1. Search and add
 npx skills find [query]
-
-# 2. Add
 npx skills add <package>
 
-# 3. Commit
+# 2. Commit
 git add .skill-lock.json
 git commit -m "Add <skill-name> skill"
 ```
@@ -124,13 +117,10 @@ git commit -m "Add <skill-name> skill"
 ### Updating Skills
 
 ```bash
-# 1. Check for updates
-make check
+# Just run make
+make
 
-# 2. Update all
-make update
-
-# 3. Commit if changes
+# Commit if .skill-lock.json changed
 git add .skill-lock.json
 git commit -m "Update skills"
 ```
@@ -159,8 +149,8 @@ Skills can leverage SuperClaude modes:
 
 1. Read the full SKILL.md documentation
 2. Check prerequisites (tools, environment variables)
-3. Verify the skill is up to date: `make check`
-4. Try reinstalling: `npx skills add <package> --force`
+3. Reinstall: `make`
+4. Force reinstall specific skill: `npx skills add <package> --force`
 
 ### Lock File Conflicts
 
@@ -171,7 +161,7 @@ If `.skill-lock.json` has merge conflicts:
 git checkout --theirs .skill-lock.json
 
 # Reinstall to verify
-make install
+make
 ```
 
 ## File Exclusions
