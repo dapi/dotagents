@@ -1,0 +1,44 @@
+{
+  "version": 3,
+  "skills": {
+    "playwriter": {
+      "source": "remorses/playwriter",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/remorses/playwriter.git",
+      "skillPath": "skills/playwriter/SKILL.md",
+      "skillFolderHash": "7dc2e2112461b1c0bd9a761531505ce93e482e35",
+      "installedAt": "2026-02-12T07:46:54.272Z",
+      "updatedAt": "2026-02-12T07:46:54.272Z"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "c2f31172b6f256272305a5e6e7228b258446899f",
+      "installedAt": "2026-02-12T07:47:01.548Z",
+      "updatedAt": "2026-02-12T07:47:01.548Z"
+    },
+    "adr-writing": {
+      "source": "existential-birds/beagle",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/existential-birds/beagle.git",
+      "skillPath": "plugins/beagle-analysis/skills/adr-writing/SKILL.md",
+      "skillFolderHash": "66dad09e6f1bc88c70b174a993fab73302c4304f",
+      "installedAt": "2026-02-14T13:09:52.154Z",
+      "updatedAt": "2026-02-14T13:09:52.154Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "codex",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-cli",
+    "opencode",
+    "claude-code"
+  ]
+}
